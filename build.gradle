@@ -1,0 +1,21 @@
+plugins {
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+mainClassName = 'DiscordClient'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('net.dv8tion:JDA:5.0.0-alpha.16')
+    implementation('ch.qos.logback:logback-classic:1.2.11')
+}
+
+shadowJar {
+    archiveFileName = "application.jar"
+}
